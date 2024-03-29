@@ -64,6 +64,14 @@ class PhpTemplate {
                   $this->assets['css']
                     = array_merge($this->assets['css'], $asset_array);
                   break;
+                case 'js':
+                  $asset_array = array_map(function($script_path) use ($type) {
+                    return "{$this->themePath}/templates/$type/$script_path";
+                  }, $asset_array);
+
+                  $this->assets['js']
+                    = array_merge($this->assets['js'], $asset_array);
+                  break;
               }
             }
           }
@@ -119,6 +127,14 @@ class PhpTemplate {
       $styles[] = file_get_contents($stylesheet);
     }
     return "<style>\n" . implode("\n", $styles) . "    </style>\n";
+  }
+
+  public function getPageScripts() : string {
+    $scripts = [];
+    foreach ($this->assets['js'] as $script) {
+      $scripts[] = file_get_contents($script);
+    }
+    return "<script>\n" . implode("\n", $scripts) . "    </script>\n";
   }
 
   /**

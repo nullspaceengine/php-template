@@ -11,7 +11,7 @@
 
 <body>
     <?php echo $content ?>
-    <script src="index.js"></script>
+    <?php echo $this->getPageScripts() ?>
 </body>
 
 </html>

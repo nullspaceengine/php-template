@@ -6,7 +6,7 @@ function template_page() : array{
       'content' => '',
       '#assets' => [
         'js' => [
-          'hello_world.js',
+          'scripts.js',
         ],
         'css' => [
           'styles.css',

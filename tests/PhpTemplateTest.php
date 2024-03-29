@@ -6,7 +6,7 @@ use Nullspaceengine\PhpTemplate\PhpTemplate;
 
 class PhpTemplateTest extends TestCase {
 
-  public function testGreetsWithName() : void {
+  public function testPage() : void {
     $pt = new PhpTemplate();
     $pt->useTheme('basic');
 
@@ -54,7 +54,9 @@ body {
 <body>
     <div>Some Dashboard Stuff Goes Here.</div>
 <div>Some Dashboard Stuff Goes Here.</div>
-    <script src="index.js"></script>
+    <script>
+alert("hello world!");
+    </script>
 </body>
 
 </html>
@@ -99,5 +101,85 @@ body {
       $this->assertEquals($content, $expected_content);
     }
 
+  }
+
+
+  public function testStyles() : void {
+    $pt = new PhpTemplate();
+    $pt->useTheme('basic');
+
+    $page = [
+      'page' => [
+        '#type' => 'page',
+        '#vars' => [
+          'title' => 'Dashboard',
+          'content' => [
+            'content' => [
+              '#type' => 'content',
+              '#vars' => [
+                'content' => 'Some Dashboard Stuff Goes Here.'
+              ],
+            ],
+            'content 2' => [
+              '#type' => 'content',
+              '#vars' => [
+                'content' => 'Some Dashboard Stuff Goes Here.'
+              ],
+            ],
+          ],
+        ],
+      ],
+    ];
+
+    $html = $pt->build($page);
+
+    $styles = $pt->getPageStyles();
+    $expected_styles = '<style>
+body {
+  background-color: black;
+  color: white;
+}
+    </style>
+';
+
+    $this->assertEquals($styles, $expected_styles);
+  }
+
+  public function testScripts() : void {
+    $pt = new PhpTemplate();
+    $pt->useTheme('basic');
+
+    $page = [
+      'page' => [
+        '#type' => 'page',
+        '#vars' => [
+          'title' => 'Dashboard',
+          'content' => [
+            'content' => [
+              '#type' => 'content',
+              '#vars' => [
+                'content' => 'Some Dashboard Stuff Goes Here.'
+              ],
+            ],
+            'content 2' => [
+              '#type' => 'content',
+              '#vars' => [
+                'content' => 'Some Dashboard Stuff Goes Here.'
+              ],
+            ],
+          ],
+        ],
+      ],
+    ];
+
+    $html = $pt->build($page);
+
+    $scripts = $pt->getPageScripts();
+    $expected_scripts = '<script>
+alert("hello world!");
+    </script>
+';
+
+    $this->assertEquals($expected_scripts, $scripts);
   }
 }
