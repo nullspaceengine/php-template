@@ -87,6 +87,14 @@ class PhpTemplate {
     return $rendered_html;
   }
 
+  /**
+   * Prints the render array after it gets parsed into html by build.
+   *
+   * @param $build
+   *  The render array.
+   *
+   * @return void
+   */
   public function render($build) : void {
     echo $this->build($build);
   }

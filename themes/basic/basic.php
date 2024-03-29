@@ -13,6 +13,13 @@ function template_content() : array {
   ];
 }
 
+function template_heading() : array {
+  return [
+    'level' => '',
+    'text' => '',
+  ];
+}
+
 function basic_page_preprocess(&$vars) : void {
 }
 
