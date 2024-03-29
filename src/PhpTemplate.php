@@ -78,7 +78,7 @@ class PhpTemplate {
 
     foreach ($build as $render_array) {
       $vars = $render_array['#vars'];
-      $template = "{$this->themePath}/templates/{$getType($render_array)}.tpl.php";
+      $template = "{$this->themePath}/templates/{$getType($render_array)}/{$getType($render_array)}.tpl.php";
 
       $rendered_html .= $renderTemplate($getType($render_array), $template, $vars);
     }
