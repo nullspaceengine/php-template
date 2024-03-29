@@ -2,14 +2,23 @@
 
 function template_page() : array{
     return [
-        'title' => '',
-        'content' => '',
+      'title' => '',
+      'content' => '',
+      '#assets' => [
+        'js' => [
+          'hello_world.js',
+        ],
+        'css' => [
+          'styles.css',
+        ],
+      ],
     ];
 }
 
 function template_content() : array {
   return [
     'content' => '',
+    '#assets' => [],
   ];
 }
 
@@ -17,6 +26,7 @@ function template_heading() : array {
   return [
     'level' => '',
     'text' => '',
+    '#assets' => [],
   ];
 }
 

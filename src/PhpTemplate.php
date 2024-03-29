@@ -19,6 +19,16 @@ class PhpTemplate {
   protected string $themePath;
 
   /**
+   * @var array
+   *
+   * A structured array of assets.
+   */
+  protected array $assets = [
+    'js' => [],
+    'css' => [],
+  ];
+
+  /**
    * Do the heavy lifting of parsing the tpl.php files and giving them correct
    * variable contexts.
    *
@@ -41,6 +51,22 @@ class PhpTemplate {
       if (function_exists("template_$type")) {
         if ($template_variables = call_user_func("template_$type")) {
           $available_vars = array_keys($template_variables);
+
+          // Process the assets.
+          if (array_key_exists('#assets', $template_variables)) {
+            foreach ($template_variables['#assets'] as $asset_type => $asset_array) {
+              switch ($asset_type) {
+                case 'css':
+                  $asset_array = array_map(function($stylesheet_path) use ($type) {
+                    return "{$this->themePath}/templates/$type/$stylesheet_path";
+                  }, $asset_array);
+
+                  $this->assets['css']
+                    = array_merge($this->assets['css'], $asset_array);
+                  break;
+              }
+            }
+          }
         }
       }
 
@@ -85,6 +111,14 @@ class PhpTemplate {
 
 
     return $rendered_html;
+  }
+
+  public function getPageStyles() : string {
+    $styles = [];
+    foreach ($this->assets['css'] as $stylesheet) {
+      $styles[] = file_get_contents($stylesheet);
+    }
+    return "<style>\n" . implode("\n", $styles) . "    </style>\n";
   }
 
   /**
