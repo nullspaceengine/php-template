@@ -121,6 +121,9 @@ class PhpTemplate {
     return $rendered_html;
   }
 
+  /**
+   * Get the inline aggregated styles.
+   */
   public function getPageStyles() : string {
     $styles = [];
     foreach ($this->assets['css'] as $stylesheet) {

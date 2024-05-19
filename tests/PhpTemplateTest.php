@@ -5,11 +5,22 @@ use PHPUnit\Framework\TestCase;
 use Nullspaceengine\PhpTemplate\PhpTemplate;
 
 class PhpTemplateTest extends TestCase {
+  private ?PhpTemplate $pt;
 
+  protected function setUp() : void {
+    $this->pt = new PhpTemplate();
+    $this->pt->useTheme('test', getcwd() . "/tests/themes/test");
+  }
+
+  protected function tearDown() : void {
+    $this->pt = NULL;
+  }
+
+  /**
+   * Test the page rendering to output.
+   */
+  #[TestDox('HTML is output')]
   public function testPage() : void {
-    $pt = new PhpTemplate();
-    $pt->useTheme('basic');
-
     $page = [
       'page' => [
         '#type' => 'page',
@@ -33,7 +44,7 @@ class PhpTemplateTest extends TestCase {
       ],
     ];
 
-    $pt->render($page);
+    $this->pt->render($page);
 
     $this->expectOutputString('<!DOCTYPE html>
 <html lang="en">
@@ -63,10 +74,11 @@ alert("hello world!");
 ');
   }
 
+  /**
+   * Test the build method's html output.
+   */
+  #[TestDox('Basic Templates are built with provided variables.')]
   public function testBuildContent() : void {
-    $pt = new PhpTemplate();
-    $pt->useTheme('basic');
-
     $content_array = [
       'content 2' => [
       '#type' => 'content',
@@ -76,15 +88,16 @@ alert("hello world!");
       ],
     ];
 
-    $content = $pt->build($content_array);
+    $content = $this->pt->build($content_array);
     $expected_content = "<div>Some Dashboard Stuff Goes Here.</div>\n";
     $this->assertEquals($content, $expected_content);
   }
 
+  /**
+   * Test build with a more complicated set of structured data.
+   */
+  #[TestDox('More complicated Templates are built with provided variables.')]
   public function testBuildHeading() : void {
-    $pt = new PhpTemplate();
-    $pt->useTheme('basic');
-
     foreach (range(1, 6) as $level) {
       $content_array = [
         'content 2' => [
@@ -96,18 +109,18 @@ alert("hello world!");
         ],
       ];
 
-      $content = $pt->build($content_array);
+      $content = $this->pt->build($content_array);
       $expected_content = "<h$level>Some Heading Stuff Goes Here.</h$level>\n";
       $this->assertEquals($content, $expected_content);
     }
 
   }
 
-
+  /**
+   * Test the CSS aggregation.
+   */
+  #[TestDox('Styles are aggregated.')]
   public function testStyles() : void {
-    $pt = new PhpTemplate();
-    $pt->useTheme('basic');
-
     $page = [
       'page' => [
         '#type' => 'page',
@@ -131,9 +144,9 @@ alert("hello world!");
       ],
     ];
 
-    $html = $pt->build($page);
+    $html = $this->pt->build($page);
 
-    $styles = $pt->getPageStyles();
+    $styles = $this->pt->getPageStyles();
     $expected_styles = '<style>
 body {
   background-color: black;
@@ -145,10 +158,11 @@ body {
     $this->assertEquals($styles, $expected_styles);
   }
 
+  /**
+   * Test the JS aggregation.
+   */
+  #[TestDox('Javascript is aggregated.')]
   public function testScripts() : void {
-    $pt = new PhpTemplate();
-    $pt->useTheme('basic');
-
     $page = [
       'page' => [
         '#type' => 'page',
@@ -172,9 +186,9 @@ body {
       ],
     ];
 
-    $html = $pt->build($page);
+    $html = $this->pt->build($page);
 
-    $scripts = $pt->getPageScripts();
+    $scripts = $this->pt->getPageScripts();
     $expected_scripts = '<script>
 alert("hello world!");
     </script>

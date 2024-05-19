@@ -2,6 +2,7 @@
   "name": "nullspaceengine/php-template",
   "description": "A homage to the venerable php-template engine from Drupal 7 and below.",
   "type": "library",
+  "keywords": ["php-template", "template", "template-engine", "theming"],
   "require-dev": {
     "phpunit/phpunit": "^11.0"
   },
@@ -14,7 +15,8 @@
   "authors": [
     {
       "name": "Frank Anderson",
-      "email": "frobdfas@gmail.com"
+      "email": "frobdfas@gmail.com",
+      "homepage": "http://www.frankrobertanderson.com"
     }
   ],
   "minimum-stability": "stable",
