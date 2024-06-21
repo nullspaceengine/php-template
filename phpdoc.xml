@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+>
+    <title>Php Template Engine</title>
+    <paths>
+        <output>build/docs</output>
+    </paths>
+
+    <version number="0.0.0">
+        <folder>0.0.0</folder>
+        <api format="php">
+            <source dsn=".">
+                <path>src</path>
+            </source>
+            <output>api</output>
+            <default-package-name>PhpTemplate</default-package-name>
+            <markers>
+                <marker>TODO</marker>
+                <marker>FIXME</marker>
+            </markers>
+        </api>
+        <guide format="rst">
+            <source dsn=".">
+                <path>docs</path>
+            </source>
+            <output>guide</output>
+        </guide>
+    </version>
+</phpdocumentor>

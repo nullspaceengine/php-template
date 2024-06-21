@@ -1,0 +1,15 @@
+
+services:
+  app:
+    build:
+      context: .
+      target: development
+    ports:
+      - 9999:80
+    volumes:
+      - ./phpunit.xml:/app/phpunit.xml
+#    develop:
+#      watch:
+#        - action: sync
+#          path: .
+#          target: /var/www/html
