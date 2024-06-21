@@ -21,4 +21,4 @@ build:
 	docker build -t php-docker-image-test --progress plain --no-cache --target test .
 
 docs:
-	docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3 -- -d ./src -t ./docs
+	docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3 -d ./src -t ./docs

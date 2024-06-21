@@ -3,12 +3,12 @@ Search.appendIndex(
                 {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate",
             "name": "PhpTemplate",
-            "summary": "",
+            "summary": "The\u0020PhpTemplate\u0020Engine.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html"
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003Abuild\u0028\u0029",
             "name": "build",
-            "summary": "Do\u0020the\u0020heavy\u0020lifting\u0020of\u0020parsing\u0020the\u0020tpl.php\u0020files\u0020and\u0020giving\u0020them\u0020correct\nvariable\u0020contexts.",
+            "summary": "Do\u0020the\u0020heavy\u0020lifting\u0020of\u0020parsing\u0020the\u0020tpl.php\u0020files.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#method_build"
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003AgetPageStyles\u0028\u0029",
@@ -18,7 +18,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003AgetPageScripts\u0028\u0029",
             "name": "getPageScripts",
-            "summary": "",
+            "summary": "Get\u0020the\u0020inline\u0020aggregated\u0020scripts.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#method_getPageScripts"
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003Arender\u0028\u0029",
@@ -33,17 +33,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003A\u0024theme",
             "name": "theme",
-            "summary": "",
+            "summary": "The\u0020Name\u0020of\u0020the\u0020theme.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#property_theme"
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003A\u0024themePath",
             "name": "themePath",
-            "summary": "",
+            "summary": "The\u0020path\u0020to\u0020the\u0020theme.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#property_themePath"
         },                {
             "fqsen": "\\Nullspaceengine\\PhpTemplate\\PhpTemplate\u003A\u003A\u0024assets",
             "name": "assets",
-            "summary": "",
+            "summary": "A\u0020structured\u0020array\u0020of\u0020assets.",
             "url": "classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#property_assets"
         },                {
             "fqsen": "\\",

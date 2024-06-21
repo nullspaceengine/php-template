@@ -118,11 +118,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">The PhpTemplate Engine.</p>
+
 
 
 
@@ -153,18 +154,21 @@
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
+<dd>A structured array of assets.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#property_theme">$theme</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
+<dd>The Name of the theme.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#property_themePath">$themePath</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
+<dd>The path to the theme.</dd>
 
     </dl>
 
@@ -179,14 +183,14 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Do the heavy lifting of parsing the tpl.php files and giving them correct
-variable contexts.</dd>
+<dd>Do the heavy lifting of parsing the tpl.php files.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#method_getPageScripts">getPageScripts()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Get the inline aggregated scripts.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Nullspaceengine-PhpTemplate-PhpTemplate.html#method_getPageStyles">getPageStyles()</a>
@@ -242,16 +246,17 @@ variable contexts.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">A structured array of assets.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$assets</span>
-     = <span class="phpdocumentor-signature__default-value">[&#039;js&#039; =&gt; [], &#039;css&#039; =&gt; []]</span></code>
+     = <span class="phpdocumentor-signature__default-value">[&quot;js&quot; =&gt; [], &quot;css&quot; =&gt; []]</span></code>
 
     
     
@@ -275,11 +280,12 @@ variable contexts.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The Name of the theme.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">string</span>
@@ -308,11 +314,12 @@ variable contexts.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The path to the theme.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
         <span class="phpdocumentor-signature__type">string</span>
@@ -346,12 +353,11 @@ variable contexts.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">44</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Do the heavy lifting of parsing the tpl.php files and giving them correct
-variable contexts.</p>
+        <p class="phpdocumentor-summary">Do the heavy lifting of parsing the tpl.php files.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -359,7 +365,9 @@ variable contexts.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>Execute the tpl.php files and and give them correct variable contexts.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -393,11 +401,12 @@ variable contexts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">135</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the inline aggregated scripts.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getPageScripts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -428,7 +437,7 @@ variable contexts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 
     </aside>
 
@@ -464,7 +473,7 @@ variable contexts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">175</span>
 
     </aside>
 
@@ -472,7 +481,7 @@ variable contexts.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">render</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$build</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">render</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$build</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -481,7 +490,7 @@ variable contexts.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$build</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -506,7 +515,7 @@ variable contexts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/PhpTemplate.php"><a href="files/src-phptemplate.html"><abbr title="src/PhpTemplate.php">PhpTemplate.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">165</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 
     </aside>
 
